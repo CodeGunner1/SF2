@@ -1,4 +1,4 @@
-// EJERCICIO 1 HOLA
+// EJERCICIO 1
 
 function SumaProductos(n: Integer): real;
 var
