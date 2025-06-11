@@ -1,5 +1,45 @@
-// EJERCICIO 1 (AUN NO DISPONIBLE, CUANDO TE ESTE DIPONIBLE TE DIGO POR WHATSAPP PARA QUE ACTUALICES ESTA PAGINA)
+// EJERCICIO 1 
+function pregunta1sf125(n: Integer): Real;
+var
+  s1, s2, suma, frac: Real;
+  exp: Real;
 
+begin
+
+  c := 0;
+  s1 := 1;
+  s2 := 1;
+  suma := 0;
+  frac := 0;
+  exp := 0;
+
+  while n > c do
+  begin
+
+    exp := Math.Power(s1, s1);
+
+    s1 := s1 + 2;
+
+    c := c + 1;
+
+
+    frac := exp / s2;
+
+    suma := suma + frac;
+
+    s2 := s2 + s1;
+
+  end;
+
+  Result := suma;
+
+end;
 
 //LLAMADA DEL EJERCICIO 1
+ Edit2.Text := FloatToStr(pregunta1sf125(n));
+
+
+
+
+//
 
