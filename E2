@@ -1,4 +1,48 @@
-// EJERCICIO 2 (AUN NO DISPONIBLE, CUANDO TE ESTE DIPONIBLE TE DIGO POR WHATSAPP PARA QUE ACTUALICES ESTA PAGINA)
+// EJERCICIO 2 
+
+function pregunta2sf125(n: Integer): string;
+var
+  i, suma, dig, temp: Integer;
+  esPrimo: Boolean;
+begin
+  if n <= 1 then
+    esPrimo := False
+  else
+  begin
+    esPrimo := True;
+    for i := 2 to Trunc(Sqrt(n)) do
+      if n mod i = 0 then
+      begin
+        esPrimo := False;
+        Break;
+      end;
+  end;
+
+  if not esPrimo then
+    Result := IntToStr(n) + ' no es primo'
+  else
+  begin
+    suma := 0;
+    temp := n;
+    while temp > 0 do
+    begin
+      dig := temp mod 10;
+      suma := suma + dig;
+      temp := temp div 10;
+    end;
+
+    if suma mod 2 = 0 then
+      Result := 'La suma es ' + IntToStr(suma) + ' el numero es par'
+    else
+      Result := 'La suma es ' + IntToStr(suma) + ' el numero es impar';
+  end;
+end;
 
 
 //LLAMADA DEL EJERCICIO 2
+
+  Edit3.Text := pregunta2sf125(n);
+
+
+
+
